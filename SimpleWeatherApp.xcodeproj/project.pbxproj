@@ -27,6 +27,7 @@
 		D25416822E1EC96E005FB202 /* SimpleWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25416982E1EC96F005FB202 /* SimpleWeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleWeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25416A22E1EC96F005FB202 /* SimpleWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B4D4922E204333007999F0 /* Secrets.xcconfig 14-49-06-531.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Secrets.xcconfig 14-49-06-531.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +89,7 @@
 		D25416792E1EC96E005FB202 = {
 			isa = PBXGroup;
 			children = (
+				D2B4D4922E204333007999F0 /* Secrets.xcconfig 14-49-06-531.xcconfig */,
 				D25416842E1EC96E005FB202 /* SimpleWeatherApp */,
 				D254169B2E1EC96F005FB202 /* SimpleWeatherAppTests */,
 				D25416A52E1EC96F005FB202 /* SimpleWeatherAppUITests */,
@@ -340,6 +342,7 @@
 		};
 		D25416AE2E1EC96F005FB202 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B4D4922E204333007999F0 /* Secrets.xcconfig 14-49-06-531.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -404,6 +407,7 @@
 		};
 		D25416AF2E1EC96F005FB202 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2B4D4922E204333007999F0 /* Secrets.xcconfig 14-49-06-531.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

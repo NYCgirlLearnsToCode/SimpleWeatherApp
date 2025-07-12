@@ -13,6 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         Task {
             try await WeatherService().getCurrentWeather()
+            try await WeatherService().getFiveDayForecast()
         }
     }
 }
