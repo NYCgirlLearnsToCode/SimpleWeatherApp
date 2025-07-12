@@ -11,7 +11,7 @@ class WeatherService {
 
     func getCurrentWeather() async throws -> CurrentWeather? {
         let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String ?? ""
-        let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=40.7447&lon=73.9485&appid=ca0e9f6ee874340b858f8697fd250a56"
+        let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=40.7447&lon=73.9485&appid=\(apiKey)"
         do {
             let currentWeather = try await NetworkManager.shared.request(endpoint: urlString, type: CurrentWeather.self)
             return currentWeather
