@@ -30,6 +30,7 @@ class CurrentWeatherView: UIView {
         setupStackView()
         setupCityLabel()
         setupTemperatureLabel()
+        setupShortWeatherDescriptionLabel()
         setupHighTempLabel()
         setupLowTempLabel()
     }
@@ -37,7 +38,14 @@ class CurrentWeatherView: UIView {
     private func setupStackView() {
         addSubview(stackView)
         stackView.axis = .vertical
+        stackView.alignment = .center
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 24.0),
+            stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -24.0),
+            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24.0)
+        ])
     }
     
     private func setupCityLabel() {
@@ -66,7 +74,15 @@ class CurrentWeatherView: UIView {
         lowTempLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
     }
     
-    func configure() {
-        
+    func configure(city: String,
+                   temperature: CGFloat,
+                   shortWeatherDescription: String,
+                   highTemp: CGFloat,
+                   lowTemp: CGFloat) {
+        cityLabel.text = city
+        temperatureLabel.text = "\(Int(temperature.rounded()))"
+        shortWeatherDescriptionLabel.text = shortWeatherDescription
+        highTempLabel.text = "\(Int(highTemp.rounded()))"
+        lowTempLabel.text = "\(Int(lowTemp.rounded()))"
     }
 }
